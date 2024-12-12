@@ -289,10 +289,6 @@ impl CliNewRepoName {
     }
 }
 
-pub trait NewRepoNameContainer {
-    type Output;
-}
-
 #[derive(Copy, Clone, Debug, EnumIter, Eq, PartialEq)]
 pub enum CliRepoKind {
     Standalone,

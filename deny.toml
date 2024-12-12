@@ -6,6 +6,7 @@ allow = [
 	"MIT",
 	"MPL-2.0",
 	"Unicode-DFS-2016",
+	"Unicode-3.0",
 ]
 exceptions = [
 	# This is us! We don't automatically `allow` GPL-3.0 by default because
