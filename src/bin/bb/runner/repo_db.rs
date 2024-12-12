@@ -150,7 +150,7 @@ pub struct RepoEntry<'a> {
     kind: RepoEntryKind<'a>,
 }
 
-impl<'a> RepoEntry<'a> {}
+impl RepoEntry<'_> {}
 
 impl RepoEntry<'_> {
     pub(crate) fn path(
@@ -856,6 +856,7 @@ impl StandaloneRepoDb<'static> {
                     .read(true)
                     .write(true)
                     .create(true)
+                    .truncate(false)
                     .open(&standalone_repos_db_path)
                     .with_context(|| {
                         anyhow!(

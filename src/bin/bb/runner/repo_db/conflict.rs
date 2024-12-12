@@ -120,7 +120,7 @@ pub enum NormalizedRepoNameEq {
     CaseInsensitiveMatch,
 }
 
-impl<'a> Normalization<RepoName<'a>> for NormalizedRepoNameEq {
+impl Normalization<RepoName<'_>> for NormalizedRepoNameEq {
     type Error = Infallible;
 
     fn normalized_eq(
