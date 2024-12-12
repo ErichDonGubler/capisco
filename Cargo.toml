@@ -31,7 +31,7 @@ strum = { version = "0.26.3", features = ["derive"] }
 thiserror = "1.0.26"
 toml = { version = "0.5.8" }
 unicase = "2.6.0"
-url = "2.2.2"
+url = "2.5.4"
 
 # The profile that 'cargo dist' will build with
 [profile.dist]
