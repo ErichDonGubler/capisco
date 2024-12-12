@@ -1,5 +1,7 @@
 [package]
-authors = ["Bellboy maintainers <https://github.com/bellboy-dotfiles/bellboy/graphs/contributors>"]
+authors = [
+  "Bellboy maintainers <https://github.com/bellboy-dotfiles/bellboy/graphs/contributors>",
+]
 description = "A binary for managing dotfiles cross-platform. Take your dotfiles wherever you go!"
 edition = "2021"
 homepage = "https://github.com/bellboy-dotfiles/bellboy"
@@ -13,7 +15,7 @@ version = "0.2.0"
 
 [dependencies]
 anyhow = "1.0.42"
-clap = { version = "4", features = ["derive", "wrap_help"] }
+clap = { version = "4.5.23", features = ["derive", "wrap_help"] }
 colog = "1.1"
 directories = "4.0.1"
 dunce = "1.0.2"
@@ -41,4 +43,9 @@ lto = "thin"
 cargo-dist-version = "0.2.0"
 ci = ["github"]
 installers = ["shell", "powershell", "homebrew"]
-targets = ["x86_64-unknown-linux-gnu", "x86_64-apple-darwin", "x86_64-pc-windows-msvc", "aarch64-apple-darwin"]
+targets = [
+  "x86_64-unknown-linux-gnu",
+  "x86_64-apple-darwin",
+  "x86_64-pc-windows-msvc",
+  "aarch64-apple-darwin",
+]
