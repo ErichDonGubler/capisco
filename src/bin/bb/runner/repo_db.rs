@@ -630,7 +630,7 @@ impl RepoDb {
         // escaping here.
         {
             let name = &name;
-            let name = unsafe { transmute::<_, &RepoName<'static>>(name) };
+            let name = unsafe { transmute::<&RepoName<'_>, &RepoName<'static>>(name) };
             self.repos.get(name)
         }
         .map(|e| e.to_borrowed())
@@ -789,7 +789,7 @@ impl RepoDb {
             // SAFETY: Safe because we're only using this reference in this call -- no lifetime
             // escaping here.
             let name = &name;
-            let name = unsafe { transmute::<_, &RepoName<'static>>(name) };
+            let name = unsafe { transmute::<&RepoName<'_>, &RepoName<'static>>(name) };
             repos.remove(name)
         };
         *needs_persist = true;
